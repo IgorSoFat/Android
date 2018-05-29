@@ -1,21 +1,16 @@
 package com.example.asus.tp1;
 
 import android.content.ContentValues;
-import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteException;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.support.v4.app.Fragment;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
-public class AddFragment extends Fragment {
-    private SQLiteDatabase db;
-    private DBOpenHelper dbOpenHelper;
+public class AddFragment extends DBFragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -26,14 +21,7 @@ public class AddFragment extends Fragment {
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        dbOpenHelper = new DBOpenHelper(
-            this.getContext(),
-            DBOpenHelper.DATABASE_NAME,
-            null,
-            DBOpenHelper.DATABASE_VERSION
-        );
-
-        openDB();
+        createConnexion();
 
         // +-----------------------------------+
         // | Gestion de l'envoie du formulaire |
@@ -62,39 +50,6 @@ public class AddFragment extends Fragment {
                 }
             }
         });
-    }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-        openDB();
-    }
-
-    @Override
-    public void onPause() {
-        super.onPause();
-        closeDB();
-    }
-
-    /**
-     * Permet d'avoir accès à la base de données via l'attribut
-     * `db` de la classe.
-     *
-     * @throws SQLiteException
-     */
-    protected void openDB() throws SQLiteException {
-        try {
-            db = dbOpenHelper.getWritableDatabase();
-        } catch (SQLiteException ex) {
-            db = dbOpenHelper.getReadableDatabase();
-        }
-    }
-
-    /**
-     * Permet de fermer la connexion avec la base de données.
-     */
-    protected void closeDB() {
-        db.close();
     }
 
     /**

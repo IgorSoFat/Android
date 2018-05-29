@@ -8,6 +8,10 @@ public class Contact {
     private String numero;
     private String sexe;
 
+    public Contact() {
+
+    }
+
     public Contact(String prenom, String nom, String numero, String sexe) {
         this.prenom = prenom;
         this.nom = nom;

@@ -17,8 +17,6 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".NextActivity1"></activity>
-
     </application>
 
     <permission android:name="WRITE_EXTERNAL_STORAGE"

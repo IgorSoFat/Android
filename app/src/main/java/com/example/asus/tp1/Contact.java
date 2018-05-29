@@ -1,13 +1,5 @@
 package com.example.asus.tp1;
 
-import android.content.Context;
-import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteOpenHelper;
-
-/**
- * Created by ASUS on 27/04/2018.
- */
-
 public class Contact {
 
     private int id;
@@ -15,6 +7,10 @@ public class Contact {
     private String nom;
     private String numero;
     private String sexe;
+
+    public Contact() {
+
+    }
 
     public Contact(String prenom, String nom, String numero, String sexe) {
         this.prenom = prenom;

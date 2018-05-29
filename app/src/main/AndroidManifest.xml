@@ -17,8 +17,10 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".NextActivity1"></activity>
-        <activity android:name=".NextActivityAdd"></activity>
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyA2RFHVfMxXbbknOlad3Td7pwGqXLvlfqI"/>
+
 
     </application>
 

@@ -17,6 +17,11 @@
             </intent-filter>
         </activity>
 
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyA2RFHVfMxXbbknOlad3Td7pwGqXLvlfqI"/>
+
+
     </application>
 
     <permission android:name="WRITE_EXTERNAL_STORAGE"

@@ -6,38 +6,9 @@
     android:layout_height="match_parent"
     tools:context="com.example.asus.tp1.MainActivity">
 
-    <Button
-        android:id="@+id/button1"
-        style="@style/Widget.AppCompat.Button.Borderless"
-        android:layout_width="387dp"
-        android:layout_height="509dp"
-        android:layout_marginTop="8dp"
-        android:elevation="24dp"
-        android:visibility="visible"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="-3dp" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/issou" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Bienvenue"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.087" />
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"/>
 
 </android.support.constraint.ConstraintLayout>

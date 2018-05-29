@@ -15,12 +15,6 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
-import java.lang.invoke.ConstantCallSite;
-
-/**
- * Created by ASUS on 27/04/2018.
- */
-
 public class NextActivityAdd extends Activity {
 
     private SQLiteDatabase db;
@@ -83,9 +77,9 @@ public class NextActivityAdd extends Activity {
         openDB();
 
         ContentValues contentValues = new ContentValues();
-        long rowId = insertRecord(contentValues,Contact);
+        long rowId = insertRecord(c);
 
-        rowId = updateRecord(contentValues,rowId,Contact);
+        rowId = updateRecord(contentValues, rowId, c);
 
         queryTheDatabase(c);
 

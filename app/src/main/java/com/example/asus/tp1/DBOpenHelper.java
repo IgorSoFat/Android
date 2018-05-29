@@ -5,15 +5,10 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-/**
- * Created by ASUS on 27/04/2018.
- */
-
 public class DBOpenHelper extends SQLiteOpenHelper{
 
     public static final String DATABASE_NAME = "myData.db";
     public static final int DATABASE_VERSION = 1;
-
 
 
     public static final String ID = "id";

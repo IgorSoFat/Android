@@ -2,10 +2,6 @@ package com.example.asus.tp1;
 
 import android.database.sqlite.SQLiteDatabase;
 
-/**
- * Created by ASUS on 27/04/2018.
- */
-
 public class ContactDAO {
     public static final String TABLE_NAME = "Contact";
     public static final String ID = "id";

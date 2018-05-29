@@ -9,16 +9,15 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
-/**
- * Created by ASUS on 09/03/2018.
- */
-
 public class NextActivity1 extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_2);
+
         Button buttonAdd = (Button) findViewById(R.id.buttonAdd);
+
         buttonAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -28,7 +27,6 @@ public class NextActivity1 extends Activity {
                 startActivity(myIntent);
             }
         });
-
     }
 
 
@@ -37,6 +35,4 @@ public class NextActivity1 extends Activity {
         getMenuInflater().inflate(R.menu.main_menu,menu);
         return true;
     }
-
-
 }

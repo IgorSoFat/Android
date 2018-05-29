@@ -1,13 +1,5 @@
 package com.example.asus.tp1;
 
-import android.content.Context;
-import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteOpenHelper;
-
-/**
- * Created by ASUS on 27/04/2018.
- */
-
 public class Contact {
 
     private int id;

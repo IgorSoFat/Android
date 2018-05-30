@@ -30,6 +30,14 @@ public class ListFragment extends DBFragment {
         ListView root = tab.findViewById(R.id.contacts_list);
         root.setAdapter(getAllContacts());
 
+        tab.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                // QUznd on clique sur un contact, on l'edit // Supprime
+                return true;
+            }
+        });
+
         return tab;
     }
 

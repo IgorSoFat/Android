@@ -23,7 +23,7 @@ public class DBOpenHelper extends SQLiteOpenHelper {
                                                 .append(ID).append(" INTEGER PRIMARY KEY AUTOINCREMENT,")
                                                 .append(PRENOM).append(" TEXT,")
                                                 .append(NOM).append(" TEXT,")
-                                                .append(NUMERO).append(" TEXT,")
+                                                .append(NUMERO).append(" VARCHAR(10),")
                                                 .append(SEXE).append(" TEXT);").toString();
 
     public static final String TABLE_DROP = " DROP TABLE IF EXISTS " + TABLE_NAME + ";";

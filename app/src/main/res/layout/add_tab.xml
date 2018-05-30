@@ -26,9 +26,11 @@
         <Space
             android:layout_width="match_parent"
             android:layout_height="25dp" />
+
         <Space
             android:layout_width="match_parent"
             android:layout_height="25dp" />
+
         <Space
             android:layout_width="match_parent"
             android:layout_height="25dp" />
@@ -36,14 +38,14 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Prénom"
-            />
+            android:text="Prénom" />
+
         <EditText
             android:id="@+id/editPrenom"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="textPersonName"/>
+            android:inputType="textPersonName" />
 
         <Space
             android:layout_width="match_parent"
@@ -52,16 +54,14 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Nom"
-            />
+            android:text="Nom" />
 
         <EditText
             android:id="@+id/editNom"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="textPersonName"
-            />
+            android:inputType="textPersonName" />
 
         <Space
             android:layout_width="match_parent"
@@ -70,36 +70,42 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Numéro"
-            />
+            android:text="Numéro" />
 
         <EditText
             android:id="@+id/editNum"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="number"
-            />
+            android:inputType="number" />
 
         <Space
             android:layout_width="match_parent"
             android:layout_height="25dp" />
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="258dp"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="vertical">
 
-            <RadioButton
-                android:id="@+id/radioHomme"
+            <RadioGroup
+                android:id="@+id/radioSexe"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Homme"/>
-            <RadioButton
-                android:id="@+id/radioFemme"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Femme" />
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/radioH"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Homme" />
+
+                <RadioButton
+                    android:id="@+id/radioF"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Femme" />
+
+            </RadioGroup>
 
         </LinearLayout>
 
@@ -113,8 +119,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Ajouter"
-            />
+            android:text="Ajouter" />
 
     </LinearLayout>
 </LinearLayout>

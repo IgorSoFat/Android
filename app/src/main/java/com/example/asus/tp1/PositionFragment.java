@@ -31,9 +31,9 @@ public class PositionFragment extends Fragment implements OnMapReadyCallback {
         mapFragment.getMapAsync(this);
     }
 
-
+// INSERER EN PARAMETRE LATITUDE ET LONGITUDE POUR POUVOIR AVOIR LA POSITION SELON DES COORDONNEES 
     @Override
     public void onMapReady(GoogleMap map) {
-        map.addMarker(new MarkerOptions().position(new LatLng(0, 0)).title("Marker"));
+        map.addMarker(new MarkerOptions().position(new LatLng(50.276578, 3.984273)).title("Marker"));
     }
 }

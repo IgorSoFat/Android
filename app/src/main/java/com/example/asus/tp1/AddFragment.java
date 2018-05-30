@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 public class AddFragment extends DBFragment {
@@ -31,16 +32,18 @@ public class AddFragment extends DBFragment {
         final EditText editNom       = getActivity().findViewById(R.id.editNom);
         final EditText editPrenom    = getActivity().findViewById(R.id.editPrenom);
         final EditText editNumero    = getActivity().findViewById(R.id.editNum);
-        final RadioButton radioHomme = getActivity().findViewById(R.id.radioHomme);
+        final RadioGroup radioGroup  = getActivity().findViewById(R.id.radioSexe);
+
 
         insert.setOnClickListener(new View.OnClickListener() {
             @Override
              public void onClick(View v) {
+                String sexe = (radioGroup.getCheckedRadioButtonId()== R.id.radioH) ? " Homme" : "Femme";
                 Contact c = new Contact(
                     editPrenom.getText().toString(),
                     editNom.getText().toString(),
                     editNumero.getText().toString(),
-                    radioHomme.isChecked() ? "Homme" : "Femme"
+                    sexe
                 );
 
                 // Si l'insertion de l'utilisateur a réussi, on redirige vers la liste

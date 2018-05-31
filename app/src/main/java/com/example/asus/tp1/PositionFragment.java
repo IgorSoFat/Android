@@ -1,19 +1,28 @@
 package com.example.asus.tp1;
 
+import android.Manifest;
+import android.annotation.SuppressLint;
+import android.content.pm.PackageManager;
+import android.location.Location;
 import android.os.Bundle;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 public class PositionFragment extends Fragment implements OnMapReadyCallback {
+
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         return inflater.inflate(R.layout.position_tab, container, false);
@@ -31,9 +40,21 @@ public class PositionFragment extends Fragment implements OnMapReadyCallback {
         mapFragment.getMapAsync(this);
     }
 
-// INSERER EN PARAMETRE LATITUDE ET LONGITUDE POUR POUVOIR AVOIR LA POSITION SELON DES COORDONNEES 
+    // Ce qui est souligné est le problème pour la geolocalisation, il faut qu'on vérifie si l'autorisation est bien fait (alt+entree avec InteliJ)
+
     @Override
     public void onMapReady(GoogleMap map) {
-        map.addMarker(new MarkerOptions().position(new LatLng(50.276578, 3.984273)).title("Marker"));
+        map.setMyLocationEnabled(true);
+            MarkerOptions marker = new MarkerOptions();
+            double latitude = marker.getPosition().latitude;
+            double longitude = marker.getPosition().longitude;
+
+            LatLng myLocation = new LatLng(latitude,longitude);
+            map.addMarker(new MarkerOptions()
+                    .position(myLocation)
+                    .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED))
+                    .title("Ma position"));
+            map.moveCamera(CameraUpdateFactory.newLatLng(myLocation));
+
     }
 }

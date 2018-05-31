@@ -18,6 +18,7 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 public class PositionFragment extends Fragment implements OnMapReadyCallback {
@@ -44,17 +45,20 @@ public class PositionFragment extends Fragment implements OnMapReadyCallback {
 
     @Override
     public void onMapReady(GoogleMap map) {
-        map.setMyLocationEnabled(true);
+
+        String[] latlong = "50.273876,3.971405".split(",");
+        LatLng location = new LatLng(50.273876, 3.971405);
+
+        /*map.setMyLocationEnabled(true);
             MarkerOptions marker = new MarkerOptions();
-            double latitude = marker.getPosition().latitude;
-            double longitude = marker.getPosition().longitude;
 
             LatLng myLocation = new LatLng(latitude,longitude);
             map.addMarker(new MarkerOptions()
                     .position(myLocation)
                     .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED))
                     .title("Ma position"));
-            map.moveCamera(CameraUpdateFactory.newLatLng(myLocation));
+            map.moveCamera(CameraUpdateFactory.newLatLng(myLocation));*/
+        map.addMarker(new MarkerOptions().position(location).title("Ma position"));
 
     }
 }

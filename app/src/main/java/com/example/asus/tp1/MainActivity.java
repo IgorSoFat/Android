@@ -5,6 +5,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
     protected ViewPager viewPager;
@@ -14,6 +16,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_main);
+
+        /*
+        final Button buttonList = (Button) findViewById(R.id.buttonHome);
+
+        buttonList.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+            }
+        });*/
 
         this.viewPager = (ViewPager)findViewById(R.id.pager);
 

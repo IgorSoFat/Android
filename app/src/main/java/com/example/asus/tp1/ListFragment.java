@@ -7,6 +7,7 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.CursorAdapter;
 import android.widget.LinearLayout;
 import android.widget.ListAdapter;
@@ -20,6 +21,16 @@ public class ListFragment extends DBFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View tab = inflater.inflate(R.layout.list_tab, container, false);
 
+        //REvenir a issou
+       /* final Button prev = (Button) getActivity().findViewById(R.id.buttonPrevList) ;
+
+        prev.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ((MainActivity) getActivity()).viewPager.setCurrentItem(0);
+            }
+        });*/
+
         createConnexion();
 
         // On récupère l'échelle du terminal pour pouvoir calculer les marges en fonction
@@ -29,14 +40,14 @@ public class ListFragment extends DBFragment {
         // On liste les contacts disponibles
         ListView root = tab.findViewById(R.id.contacts_list);
         root.setAdapter(getAllContacts());
-
+/*
         tab.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View view) {
                 // QUznd on clique sur un contact, on l'edit // Supprime
                 return true;
             }
-        });
+        });*/
 
         return tab;
     }

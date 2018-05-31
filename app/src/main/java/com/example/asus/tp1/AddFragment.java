@@ -28,11 +28,19 @@ public class AddFragment extends DBFragment {
         // | Gestion de l'envoie du formulaire |
         // +-----------------------------------+
         final Button insert = (Button) getActivity().findViewById(R.id.buttonInsert);
+        final Button prev = (Button) getActivity().findViewById(R.id.buttonPrevAdd);
 
         final EditText editNom       = getActivity().findViewById(R.id.editNom);
         final EditText editPrenom    = getActivity().findViewById(R.id.editPrenom);
         final EditText editNumero    = getActivity().findViewById(R.id.editNum);
         final RadioGroup radioGroup  = getActivity().findViewById(R.id.radioSexe);
+
+        prev.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ((MainActivity) getActivity()).viewPager.setCurrentItem(0);
+            }
+        });
 
 
         insert.setOnClickListener(new View.OnClickListener() {

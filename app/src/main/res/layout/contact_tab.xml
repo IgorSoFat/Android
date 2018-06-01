@@ -11,7 +11,7 @@
         android:id="@+id/buttonPrevContact"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Precedent"
+        android:text="@string/Precedent"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="0dp"
         tools:ignore="MissingConstraints" />
@@ -38,7 +38,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Prénom" />
+            android:text="@string/Prenom" />
 
         <EditText
             android:id="@+id/editPrenom"
@@ -54,7 +54,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Nom" />
+            android:text="@string/Nom" />
 
         <EditText
             android:id="@+id/editNom"
@@ -70,7 +70,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Numéro" />
+            android:text="@string/Numero" />
 
         <EditText
             android:id="@+id/editNum"
@@ -97,13 +97,13 @@
                     android:id="@+id/radioH"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:text="Homme" />
+                    android:text="@string/Homme" />
 
                 <RadioButton
                     android:id="@+id/radioF"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:text="Femme" />
+                    android:text="@string/Femme" />
 
             </RadioGroup>
 
@@ -124,13 +124,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Supprimer" />
+                android:text="@string/Supprimer" />
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Modifier" />
+                android:text="@string/Modifier" />
 
         </LinearLayout>
 

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TP1</string>
+    <string name="Precedent">Previously</string>
+    <string name="Prenom">First Name </string>
+    <string name="Nom">Last Name</string>
+    <string name="Numero">Phone Number</string>
+    <string name="Homme">Man</string>
+    <string name="Femme">Woman</string>
+    <string name="Ajouter">Add</string>
+    <string name="Supprimer">Delete</string>
+    <string name="Modifier">Edit</string>
+    <string name="Bienvenue">Welcome</string>
+</resources>

@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">TP1</string>
+    <string name="Precedent">Précédent</string>
+    <string name="Prenom">Prénom </string>
+    <string name="Nom">Nom</string>
+    <string name="Numero">Numéro</string>
+    <string name="Homme">Homme</string>
+    <string name="Femme">Femme</string>
+    <string name="Ajouter">Ajouter</string>
+    <string name="Supprimer">Supprimer</string>
+    <string name="Modifier">Modifier</string>
+    <string name="Bienvenue">Bienvenue</string>
 </resources>

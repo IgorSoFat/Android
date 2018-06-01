@@ -1,7 +1,6 @@
 package com.example.asus.tp1;
 
 import android.Manifest;
-import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.location.Criteria;
@@ -20,9 +19,7 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
-import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 public class PositionFragment extends Fragment implements OnMapReadyCallback {
@@ -50,32 +47,42 @@ public class PositionFragment extends Fragment implements OnMapReadyCallback {
 
     @Override
     public void onMapReady(GoogleMap map) {
-
-        if (ContextCompat.checkSelfPermission(this.getActivity().getApplicationContext(),
-                Manifest.permission.READ_CONTACTS)
-                != PackageManager.PERMISSION_GRANTED) {
-            if (!ActivityCompat.shouldShowRequestPermissionRationale(this.getActivity(),Manifest.permission.ACCESS_FINE_LOCATION)) {
-                        ActivityCompat.requestPermissions(this.getActivity(),
-                        new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
-                        1);
-            }
+        if (ContextCompat.checkSelfPermission(
+            this.getActivity().getApplicationContext(),
+            Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            askGPSPersmissions();
         }
-/*
+
+        map.setMyLocationEnabled(true);
+
         LocationManager locationManager = (LocationManager) getActivity()
                 .getSystemService(Context.LOCATION_SERVICE);
+
         Criteria criteria = new Criteria();
-        Location location = locationManager.getLastKnownLocation(locationManager.getBestProvider(criteria,false));
+        LatLng myLocation = new LatLng(50.000, 3.42); // Fallback en cas d'échec
 
-        LatLng myLocation = new LatLng(location.getLatitude(),location.getLongitude());
-        map.setMyLocationEnabled(true);*/
+        Location location = locationManager.getLastKnownLocation(
+             LocationManager.GPS_PROVIDER
+        );
 
-        LatLng myLocation = new LatLng(50.000,3.42);
-            map.addMarker(new MarkerOptions()
-                    .position(myLocation)
-                    .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED))
-                    .title("Ma position"));
-            map.moveCamera(CameraUpdateFactory.newLatLngZoom(myLocation,10));
+        if (location != null) {
+            myLocation = new LatLng(location.getLatitude(), location.getLongitude());
+        }
+
+        map.moveCamera(CameraUpdateFactory.newLatLngZoom(myLocation, 10));
         map.addMarker(new MarkerOptions().position(myLocation).title("Ma position"));
+    }
 
+    protected void askGPSPersmissions() {
+        if (!ActivityCompat.shouldShowRequestPermissionRationale(
+            this.getActivity(),
+            Manifest.permission.ACCESS_FINE_LOCATION
+        )) {
+            ActivityCompat.requestPermissions(
+                this.getActivity(),
+                new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
+                1
+            );
+        }
     }
 }

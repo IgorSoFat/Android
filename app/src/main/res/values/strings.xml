@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">TP1</string>
     <string name="Precedent">Précédent</string>
@@ -10,4 +11,7 @@
     <string name="Supprimer">Supprimer</string>
     <string name="Modifier">Modifier</string>
     <string name="Bienvenue">Bienvenue</string>
+    <string name="AddContact">Ajouter un contact</string>
+    <string name="ListContact">Liste des contacts</string>
+    <string name="Position">Position</string>
 </resources>

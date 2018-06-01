@@ -42,9 +42,6 @@ public class PositionFragment extends Fragment implements OnMapReadyCallback {
         mapFragment.getMapAsync(this);
     }
 
-    // Ce qui est souligné est le problème pour la geolocalisation, il faut qu'on vérifie
-    // si l'autorisation est bien fait (alt+entree avec InteliJ)
-
     @Override
     public void onMapReady(GoogleMap map) {
         if (ContextCompat.checkSelfPermission(
@@ -52,17 +49,7 @@ public class PositionFragment extends Fragment implements OnMapReadyCallback {
             Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             askGPSPersmissions();
         }
-
         map.setMyLocationEnabled(true);
-
-        LocationManager locationManager = (LocationManager) getActivity()
-                .getSystemService(Context.LOCATION_SERVICE);
-
-        Criteria criteria = new Criteria();
-        
-        Location location = locationManager.getLastKnownLocation(
-             LocationManager.GPS_PROVIDER
-        );
     }
 
     protected void askGPSPersmissions() {

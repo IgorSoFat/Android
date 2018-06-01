@@ -5,19 +5,19 @@
 
     <item
         android:id="@+id/action_add"
-        android:title="Ajouter un contact"
+        android:title="@string/AddContact"
         android:icon="@android:drawable/ic_menu_preferences"
         app:showAsAction="never"/>
 
     <item
         android:id="@+id/action_list"
-        android:title="Liste des contacts"
+        android:title="@string/ListContact"
         android:icon="@android:drawable/list_selector_background"
         app:showAsAction="never"/>
 
     <item
         android:id="@+id/action_position"
-        android:title="Position"
+        android:title="@string/Position"
         android:icon="@android:drawable/ic_popup_sync"
         app:showAsAction="never"/>
 </menu>

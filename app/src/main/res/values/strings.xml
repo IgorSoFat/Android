@@ -14,4 +14,16 @@
     <string name="AddContact">Ajouter un contact</string>
     <string name="ListContact">Liste des contacts</string>
     <string name="Position">Position</string>
+
+    <string name="color">Couleur</string>
+    <string name="font">Police</string>
+    <string name="change_color">Changer de couleur</string>
+    <string name="change_font">Changer de police</string>
+
+    <string name="red">Rouge</string>
+    <string name="blue">Bleu</string>
+    <string name="indigo">Indigo</string>
+    <string name="green">Vert</string>
+    <string name="yellow">Jaune</string>
+    <string name="choose_color">Choisissez une couleur</string>
 </resources>

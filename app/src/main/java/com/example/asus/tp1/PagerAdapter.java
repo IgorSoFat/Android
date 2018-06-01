@@ -17,16 +17,18 @@ public class PagerAdapter extends FragmentStatePagerAdapter {
             return new AddFragment();
         } else if (position == 2) {
             return new ListFragment();
-        } else if (position ==3 ){
+        } else if (position == 3){
             return new PositionFragment();
-        } else {
+        } else if (position == 4) {
             return new ContactFragment();
+        } else {
+            return new OptionsFragment();
         }
     }
 
     @Override
     public int getCount() {
-        return 5;
+        return 6;
     }
 
 }

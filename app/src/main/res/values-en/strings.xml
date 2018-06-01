@@ -14,4 +14,16 @@
     <string name="AddContact">Add a contact</string>
     <string name="ListContact">Contacts List</string>
     <string name="Position">Position</string>
+
+    <string name="color">Color</string>
+    <string name="font">Font</string>
+    <string name="change_color">Change current color</string>
+    <string name="change_font">Change font</string>
+
+    <string name="red">Red</string>
+    <string name="blue">Blue</string>
+    <string name="indigo">Indigo</string>
+    <string name="green">Green</string>
+    <string name="yellow">Yellow</string>
+    <string name="choose_color">Choose a color</string>
 </resources>

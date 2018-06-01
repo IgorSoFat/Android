@@ -14,4 +14,9 @@
     <string name="AddContact">Add a contact</string>
     <string name="ListContact">Contacts List</string>
     <string name="Position">Position</string>
+
+    <string name="color">Color</string>
+    <string name="font">Font</string>
+    <string name="change_color">Change current color</string>
+    <string name="change_font">Change font</string>
 </resources>

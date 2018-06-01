@@ -14,4 +14,9 @@
     <string name="AddContact">Ajouter un contact</string>
     <string name="ListContact">Liste des contacts</string>
     <string name="Position">Position</string>
+
+    <string name="color">Couleur</string>
+    <string name="font">Police</string>
+    <string name="change_color">Changer de couleur</string>
+    <string name="change_font">Changer de police</string>
 </resources>

@@ -20,4 +20,10 @@
         android:title="@string/Position"
         android:icon="@android:drawable/ic_popup_sync"
         app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/options"
+        android:title="Options"
+        android:icon="@android:drawable/ic_menu_preferences"
+        app:showAsAction="never"/>
 </menu>

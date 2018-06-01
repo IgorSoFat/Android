@@ -44,6 +44,9 @@ public class MainActivity extends AppCompatActivity {
             case R.id.action_position:
                 this.viewPager.setCurrentItem(3);
                 return true;
+            case R.id.options:
+                this.viewPager.setCurrentItem(5);
+                return true;
         }
 
         return super.onOptionsItemSelected(item);

@@ -1,5 +1,6 @@
 package com.example.asus.tp1;
 
+import android.app.Activity;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -16,15 +17,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_main);
-
-        /*
-        final Button buttonList = (Button) findViewById(R.id.buttonHome);
-
-        buttonList.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-            }
-        });*/
 
         this.viewPager = (ViewPager)findViewById(R.id.pager);
 

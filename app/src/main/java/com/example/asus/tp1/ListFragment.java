@@ -22,14 +22,14 @@ public class ListFragment extends DBFragment {
         View tab = inflater.inflate(R.layout.list_tab, container, false);
 
         //REvenir a issou
-       /* final Button prev = (Button) getActivity().findViewById(R.id.buttonPrevList) ;
+        final Button prev = (Button) tab.findViewById(R.id.buttonPrevList) ;
 
         prev.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 ((MainActivity) getActivity()).viewPager.setCurrentItem(0);
             }
-        });*/
+        });
 
         createConnexion();
 

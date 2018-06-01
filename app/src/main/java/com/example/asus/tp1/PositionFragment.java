@@ -74,7 +74,7 @@ public class PositionFragment extends Fragment implements OnMapReadyCallback {
                     .position(myLocation)
                     .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED))
                     .title("Ma position"));
-            map.moveCamera(CameraUpdateFactory.newLatLng(myLocation));
+            map.moveCamera(CameraUpdateFactory.newLatLngZoom(myLocation,10));
         map.addMarker(new MarkerOptions().position(myLocation).title("Ma position"));
 
     }

@@ -40,15 +40,14 @@ public class ListFragment extends DBFragment {
         // On liste les contacts disponibles
         ListView root = tab.findViewById(R.id.contacts_list);
         root.setAdapter(getAllContacts());
-/*
-        tab.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View view) {
-                // QUznd on clique sur un contact, on l'edit // Supprime
-                return true;
-            }
-        });*/
 
+        // Lorsqu'on clique sur un contact, on ouvre le fragment contact et on peut l'editer 
+        tab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ((MainActivity) getActivity()).viewPager.setCurrentItem(4);
+            }
+        });
         return tab;
     }
 

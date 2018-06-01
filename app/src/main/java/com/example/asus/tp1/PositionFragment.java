@@ -59,18 +59,10 @@ public class PositionFragment extends Fragment implements OnMapReadyCallback {
                 .getSystemService(Context.LOCATION_SERVICE);
 
         Criteria criteria = new Criteria();
-        LatLng myLocation = new LatLng(50.000, 3.42); // Fallback en cas d'échec
-
+        
         Location location = locationManager.getLastKnownLocation(
              LocationManager.GPS_PROVIDER
         );
-
-        if (location != null) {
-            myLocation = new LatLng(location.getLatitude(), location.getLongitude());
-        }
-
-        map.moveCamera(CameraUpdateFactory.newLatLngZoom(myLocation, 10));
-        map.addMarker(new MarkerOptions().position(myLocation).title("Ma position"));
     }
 
     protected void askGPSPersmissions() {
